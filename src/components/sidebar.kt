@@ -14,15 +14,15 @@ class Sidebar : RComponent<RProps, RState>() {
                 classes = setOf("sidebar")
             }
             div {
+                attrs {
+                    classes = setOf("center")
+                }
                 img {
                     attrs {
                         classes = setOf("profile_image")
                         src = "./ggb2.jpg"
                         alt = ""
                     }
-                }
-                h4 {
-                    +"ggb2"
                 }
             }
             a {
@@ -61,7 +61,7 @@ class Sidebar : RComponent<RProps, RState>() {
                     }
                 }
                 span {
-
+                    + "Settings"
                 }
             }
             a {

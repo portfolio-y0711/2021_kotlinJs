@@ -5,33 +5,32 @@ import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
-import react.dom.a
-import react.dom.div
-import react.dom.h3
-import react.dom.span
+import react.dom.*
 
-class Header: RComponent<RProps,RState>() {
+class Header : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
-        div {
-            attrs {
-                classes = setOf("left_area")
-            }
-            h3 {
-                + "Coding "
-                span {
-                    + "is Fun"
-                }
-            }
+        header {
             div {
                 attrs {
-                    classes = setOf("right_area")
+                    classes = setOf("left_area")
                 }
-                a {
-                    attrs {
-                        href = "#"
-                        classes = setOf("logout_btn")
+                h3 {
+                    +"Code "
+                    span {
+                        +"is Fun"
                     }
-                    + "Logout"
+                }
+                div {
+                    attrs {
+                        classes = setOf("right_area")
+                    }
+                    a {
+                        attrs {
+                            href = "#"
+                            classes = setOf("logout_btn")
+                        }
+                        +"Logout"
+                    }
                 }
             }
         }
